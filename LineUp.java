@@ -1,0 +1,48 @@
+/**
+ * Ladder by Martin Björling, 
+ * martinbjorling@gmail.com, 0737565044
+ *
+ * @author   Martin Björling
+ * @version  1.0
+ * @since    2015-11-04
+ */
+
+import java.lang.Math;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class LineUp {
+	
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		ArrayList<String> answers = new ArrayList<String>();
+
+		int numOfTestCases = Integer.parseInt(sc.nextLine());
+
+		if (numOfTestCases < 2 || numOfTestCases > 20) {
+			System.out.println("Wrong value");
+			System.exit(1);
+		}
+
+		String[] names = new String[numOfTestCases];
+
+		for (int i = 0; i < numOfTestCases; i++) {
+			names[i] = sc.nextLine();
+		}
+
+		boolean increasing = true;
+		boolean decreasing = true;
+
+		for (int i = 0; i < numOfTestCases-1; i++) {
+			if (names[i].compareTo(names[i+1]) < 0) decreasing = false;
+			if (names[i].compareTo(names[i+1]) > 0) increasing = false;
+		}
+
+		if (increasing && !decreasing) System.out.println("INCREASING");
+		else if (!increasing && decreasing) System.out.println("DECREASING");
+		else System.out.println("NEITHER");
+
+	}
+}
