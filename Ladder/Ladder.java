@@ -23,18 +23,13 @@ public class Ladder {
 		int heightInt = Integer.parseInt(inputArr[0]);
 		int angleInt = Integer.parseInt(inputArr[1]);
 
-		if (heightInt < 1 || heightInt > 10000 || angleInt < 1 || angleInt > 89) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		double height = Double.parseDouble(inputArr[0]);
 		double angle = Math.toRadians(Double.parseDouble(inputArr[1]));
 
 		double length = height / Math.sin(angle);
 
-		int minLen = (int)Math.ceil(length);
+		int answer = (int)Math.ceil(length);
 
-		System.out.println(Integer.toString(minLen));
+		System.out.println(Integer.toString(answer));
 	}
 }

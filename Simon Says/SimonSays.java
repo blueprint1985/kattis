@@ -21,11 +21,6 @@ public class SimonSays {
 
 		int numOfTestCases = Integer.parseInt(sc.nextLine());
 
-		if (numOfTestCases < 0 || numOfTestCases > 1000) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		for (int i = 0; i < numOfTestCases; i++) {
 			String testCase = sc.nextLine();
 

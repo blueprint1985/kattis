@@ -21,18 +21,8 @@ public class Oddities {
 
 		int numOfTestCases = Integer.parseInt(sc.nextLine());
 
-		if (numOfTestCases < 0 || numOfTestCases > 20) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		for (int i = 0; i < numOfTestCases; i++) {
 			int testCase = Integer.parseInt(sc.nextLine());
-
-			if (testCase < -10 || testCase > 10) {
-				System.out.println("Wrong value");
-				System.exit(1);
-			}
 
 			if (testCase % 2 == 0) answers.add(Integer.toString(testCase) + " is even");
 			else answers.add(Integer.toString(testCase) + " is odd");

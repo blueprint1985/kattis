@@ -23,11 +23,6 @@ public class Spavanac {
 		int hours = Integer.parseInt(inputArr[0]);
 		int minutes = Integer.parseInt(inputArr[1]);
 
-		if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		if (minutes < 45) {
 			if (hours == 0) {
 				hours = 23;

@@ -17,14 +17,7 @@ public class LineUp {
 
 		Scanner sc = new Scanner(System.in);
 
-		ArrayList<String> answers = new ArrayList<String>();
-
 		int numOfTestCases = Integer.parseInt(sc.nextLine());
-
-		if (numOfTestCases < 2 || numOfTestCases > 20) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
 
 		String[] names = new String[numOfTestCases];
 

@@ -23,11 +23,6 @@ public class Carrots {
 		int contestants = Integer.parseInt(inputArr[0]);
 		int carrots = Integer.parseInt(inputArr[1]);
 
-		if (contestants < 1 || carrots > 1000) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		for (int i = 0; i < contestants; i++) {
 			String nextContestant = sc.nextLine();
 		}

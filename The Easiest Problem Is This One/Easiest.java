@@ -32,17 +32,11 @@ public class Easiest {
 				inputSum += Character.getNumericValue(c);
 			}
 
-			//System.out.println(Integer.toString(inputSum));
-
 			int inputInt = Integer.parseInt(inputString);
 
 			int k = 11;
 
-			//System.out.println("Go here 1");
-
 			while (true) {
-				//System.out.println("Go here 2");
-
 				int sumOfMult = inputInt * k;
 
 				String sumString = Integer.toString(sumOfMult);
@@ -54,9 +48,6 @@ public class Easiest {
 
 					multSum += Character.getNumericValue(d);
 				}
-
-				//System.out.println(Integer.toString(multSum));
-				//System.out.println(Integer.toString(k));
 
 				if (multSum == inputSum) {
 					answers.add(Integer.toString(k));

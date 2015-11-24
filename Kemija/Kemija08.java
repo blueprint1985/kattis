@@ -18,27 +18,22 @@ public class Kemija08 {
 
 		String inputString = sc.nextLine();
 
-		if (inputString.length() > 100) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		int i = 0;
 
-		String newStr = "";
+		String answer = "";
 
 		while (i < inputString.length()) {
 			char c = inputString.charAt(i);
 
 			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-				newStr += c;
+				answer += c;
 				i += 3;
 			} else {
-				newStr += c;
+				answer += c;
 				i++;
 			}
 		}
 
-		System.out.println(newStr);
+		System.out.println(answer);
 	}
 }

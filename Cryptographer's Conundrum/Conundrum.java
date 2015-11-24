@@ -18,11 +18,6 @@ public class Conundrum {
 
 		String inputString = sc.nextLine();
 
-		if (inputString.length() > 300 || inputString.length() % 3 != 0) {
-			System.out.println("Wrong value");
-			System.exit(1);
-		}
-
 		int counter = 0;
 
 		for (int i = 0; i < inputString.length(); i++) {
