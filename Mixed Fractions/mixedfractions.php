@@ -1,37 +1,38 @@
 <?php
-	/**
-	 * Ladder by Martin Björling, 
-	 * martinbjorling@gmail.com, 0737565044
-	 *
-	 * @author   Martin Björling
-	 * @version  1.0
-	 * @since    2015-11-04
-	 */
+/**
+ * Problem: Mixed Fractions
+ * https://open.kattis.com/problems/mixedfractions
+ *
+ * @author   Martin Björling
+ * @email    martinbjorling@gmail.com
+ * @version  1.0
+ * @since    2015-11-24
+ */
 
-	$answers = [];
+$answers = [];
 
-	while (true) {
-		$inputString = stream_get_line(STDIN, 1024, PHP_EOL);
+while (true) {
+	$inputString = stream_get_line(STDIN, 1024, PHP_EOL);
 
-		if ($inputString == "0 0") break;
+	if ($inputString == "0 0") break;
 
-		$inputArr = explode(" ", $inputString);
+	$inputArr = explode(" ", $inputString);
 
-		$numerator = $inputArr[0];
-		$denominator = $inputArr[1];
+	$numerator = $inputArr[0];
+	$denominator = $inputArr[1];
 
-		$wholeNumber = floor($numerator / $denominator);
-		$newNumerator = $numerator % $denominator;
-		
-
-        $answers[] = $wholeNumber." ".$newNumerator." / ".$denominator."\n";
-
-        
-	}
-
-	foreach ($answers as $value) {
-		fwrite(STDOUT, $value);
-	}
+	$wholeNumber = floor($numerator / $denominator);
+	$newNumerator = $numerator % $denominator;
 	
+
+    $answers[] = $wholeNumber." ".$newNumerator." / ".$denominator."\n";
+
+    
+}
+
+foreach ($answers as $value) {
+	fwrite(STDOUT, $value);
+}
+
 
 ?>

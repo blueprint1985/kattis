@@ -1,10 +1,11 @@
 /**
- * Ladder by Martin Björling, 
- * martinbjorling@gmail.com, 0737565044
+ * Problem: Reversed Binary Numbers
+ * https://open.kattis.com/problems/reversebinary
  *
  * @author   Martin Björling
+ * @email    martinbjorling@gmail.com
  * @version  1.0
- * @since    2015-11-04
+ * @since    2015-11-24
  */
 
 import java.lang.Math;

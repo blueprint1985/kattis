@@ -1,54 +1,55 @@
 <?php
-	/**
-	 * Ladder by Martin Björling, 
-	 * martinbjorling@gmail.com, 0737565044
-	 *
-	 * @author   Martin Björling
-	 * @version  1.0
-	 * @since    2015-11-04
-	 */
+/**
+ * Problem: The Easiest Problem Is This One
+ * https://open.kattis.com/problems/easiest
+ *
+ * @author   Martin Björling
+ * @email    martinbjorling@gmail.com
+ * @version  1.0
+ * @since    2015-11-24
+ */
 
-	$answers = [];
+$answers = [];
+
+while (true) {
+	$inputString = stream_get_line(STDIN, 1024, PHP_EOL);
+
+	if ($inputString == "0") break;
+
+	$inputSum = 0;
+
+	$inputArr = str_split($inputString);
+
+	for ($i = 0; $i < count($inputArr); $i++) {
+		$inputSum += $inputArr[$i];
+	}
+
+	$k = 11;
 
 	while (true) {
-		$inputString = stream_get_line(STDIN, 1024, PHP_EOL);
+		$sumOfMult = $inputString * $k;
 
-		if ($inputString == "0") break;
+		$multSum = 0;
 
-		$inputSum = 0;
+		$multArr = str_split($sumOfMult);
 
-		$inputArr = str_split($inputString);
-
-		for ($i = 0; $i < count($inputArr); $i++) {
-			$inputSum += $inputArr[$i];
+		for ($l = 0; $l < count($multArr); $l++) {
+			$multSum += $multArr[$l];
 		}
 
-		$k = 11;
-
-		while (true) {
-			$sumOfMult = $inputString * $k;
-
-			$multSum = 0;
-
-			$multArr = str_split($sumOfMult);
-
-			for ($l = 0; $l < count($multArr); $l++) {
-				$multSum += $multArr[$l];
-			}
-
-			if ($multSum == $inputSum) {
-				$answers[] = $k."\n";
-				break;
-			}
-
-			$k++;
+		if ($multSum == $inputSum) {
+			$answers[] = $k."\n";
+			break;
 		}
-        
-	}
 
-	foreach ($answers as $value) {
-		fwrite(STDOUT, $value);
+		$k++;
 	}
-	
+    
+}
+
+foreach ($answers as $value) {
+	fwrite(STDOUT, $value);
+}
+
 
 ?>

@@ -1,10 +1,11 @@
 /**
- * Phone List by Martin Björling, 
- * martinbjorling@gmail.com, 0737565044
+ * Problem: Phone List
+ * https://open.kattis.com/problems/phonelist
  *
  * @author   Martin Björling
+ * @email    martinbjorling@gmail.com
  * @version  1.0
- * @since    2015-11-04
+ * @since    2015-11-24
  */
 
 import java.util.Scanner;
