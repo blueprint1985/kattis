@@ -16,7 +16,7 @@ public class Billiard {
 	
 	public static void main(String[] args) {
 
-		/*Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
 		ArrayList<String> answers = new ArrayList<String>();
 
@@ -33,8 +33,8 @@ public class Billiard {
 			int m = Integer.parseInt(inputArr[3]);
 			int n = Integer.parseInt(inputArr[4]);
 
-			double sideH = a*m;
-            double sideV = b*n;
+			double sideH = a * m;
+            double sideV = b * n;
             double sideC = Math.sqrt(sideH * sideH + sideV * sideV);
             double angle = Math.toDegrees(Math.acos(sideH / sideC));
 			
@@ -55,29 +55,6 @@ public class Billiard {
 		
 		for (int j = 0; j < answers.size(); j++) {
 			System.out.println(answers.get(j));
-		}*/
-		
-		Scanner sc = new Scanner(System.in);
-        while(true){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int s = sc.nextInt();
-            int m = sc.nextInt();
-            int n = sc.nextInt();
-
-            if((a|b|s|m|n) == 0) return;
-
-            double sideh = a*m;
-            double sidev = b*n;
-            double sidec = Math.sqrt(sideh*sideh + sidev*sidev);
-            double angle;
-
-            angle = Math.toDegrees(Math.acos(sideh/sidec));
-
-            System.out.printf("%.2f ", angle);
-            System.out.printf("%.2f", sidec/s);
-            System.out.println();
-
-        }
+		}
 	}
 }

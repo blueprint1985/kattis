@@ -24,10 +24,10 @@ while (true) {
 	$m = $inputArr[3];
 	$n = $inputArr[4];
 
-	$sideh = $a*$m;
-    $sidev = $b*$n;
-    $sidec = sqrt($sideh*$sideh + $sidev*$sidev);
-    $angle = rad2deg(acos($sideh/$sidec));
+	$sideH = $a * $m;
+    $sideV = $b * $n;
+    $sideC = sqrt($sideH * $sideH + $sideV * $sideV);
+    $angle = rad2deg(acos($sideH / $sideC));
 
     $printAngle = sprintf("%0.2f",$angle);
     $printTime = sprintf("%0.2f",$sidec/$s);
